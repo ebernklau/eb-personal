@@ -1,0 +1,268 @@
+:root {
+  --background: #faf7f1;
+  --text: #173a37;
+  --muted: #5e6662;
+
+  --salmon: #d98278;
+  --olive: #7e8760;
+  --turquoise: #3694a2;
+
+  --cream: #fffaf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  width: min(100% - 40px, 680px);
+  margin: 0 auto;
+  padding: 9vh 0 7vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* ---------- Header ---------- */
+
+.intro {
+  text-align: center;
+  margin-bottom: 42px;
+  position: relative;
+  z-index: 2;
+}
+
+.intro h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3.15rem);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.accent-line {
+  width: 38px;
+  height: 2px;
+  background: var(--salmon);
+  margin: 20px auto;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ---------- Cards ---------- */
+
+.links {
+  display: grid;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  min-height: 112px;
+  padding: 22px 26px;
+
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 14px;
+
+  color: white;
+  text-decoration: none;
+
+  box-shadow: 0 6px 18px rgba(20, 45, 40, 0.08);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(20, 45, 40, 0.14);
+  filter: brightness(1.03);
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 4px;
+}
+
+.coaching {
+  background: var(--salmon);
+}
+
+.finca {
+  background: var(--olive);
+}
+
+.linkedin {
+  background: var(--turquoise);
+}
+
+.card-icon {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.tree-icon {
+  font-size: 2.4rem;
+}
+
+.linkedin-icon {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+
+.card-text h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+.arrow {
+  font-size: 1.55rem;
+  transition: transform 180ms ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Botanical decoration ---------- */
+
+.botanical {
+  position: absolute;
+  width: 175px;
+  left: -145px;
+  bottom: 3vh;
+
+  color: var(--salmon);
+  opacity: 0.55;
+
+  pointer-events: none;
+}
+
+.botanical svg {
+  width: 100%;
+  height: auto;
+}
+
+.botanical path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+  .page {
+    width: min(100% - 32px, 520px);
+    padding: 55px 0 45px;
+    justify-content: flex-start;
+  }
+
+  .intro {
+    margin-bottom: 34px;
+  }
+
+  .intro h1 {
+    font-size: 2.25rem;
+  }
+
+  .accent-line {
+    margin: 17px auto;
+  }
+
+  .card {
+    min-height: 94px;
+    padding: 18px 20px;
+
+    grid-template-columns: 40px 1fr auto;
+    gap: 14px;
+
+    border-radius: 12px;
+  }
+
+  .card-icon {
+    font-size: 1.65rem;
+  }
+
+  .tree-icon {
+    font-size: 1.9rem;
+  }
+
+  .linkedin-icon {
+    font-size: 1.55rem;
+  }
+
+  .card-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .card-text p {
+    font-size: 0.8rem;
+  }
+
+  .botanical {
+    width: 125px;
+    left: -65px;
+    bottom: 0;
+    opacity: 0.35;
+  }
+}
+
+/* Very small phones */
+
+@media (max-width: 380px) {
+  .page {
+    width: min(100% - 24px, 520px);
+  }
+
+  .card {
+    grid-template-columns: 32px 1fr auto;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .card-text p {
+    font-size: 0.76rem;
+  }
+}

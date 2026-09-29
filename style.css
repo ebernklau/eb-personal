@@ -164,7 +164,7 @@ body {
 }
 
 /* ---------- Botanical decoration ---------- */
-
+/*
 .botanical {
   position: absolute;
   width: 175px;
@@ -191,7 +191,7 @@ body {
   stroke-linejoin: round;
 }
 }
-
+*/
 /* ---------- Mobile ---------- */
 
 @media (max-width: 700px) {

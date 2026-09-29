@@ -166,6 +166,9 @@ body {
 /* ---------- Botanical decoration ---------- */
 /*
 .botanical {
+  display: none;
+}
+.botanical {
   position: absolute;
   width: 175px;
   left: -145px;

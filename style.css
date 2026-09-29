@@ -163,38 +163,7 @@ body {
   transform: translateX(4px);
 }
 
-/* ---------- Botanical decoration ---------- */
-.botanical {
-  display: none;
-}
-/*
-.botanical {
-  position: absolute;
-  width: 175px;
-  left: -145px;
-  bottom: 3vh;
 
-  color: var(--salmon);
-  opacity: 0.55;
-
-  pointer-events: none;
-}
-
-.botanical svg {
-  width: 100%;
-  height: auto;
-}
-
-.botanical path,
-.botanical ellipse {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-}
-*/
 /* ---------- Mobile ---------- */
 
 @media (max-width: 700px) {

@@ -182,12 +182,14 @@ body {
   height: auto;
 }
 
-.botanical path {
+.botanical path,
+.botanical ellipse {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.5;
+  stroke-width: 1.35;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
 }
 
 /* ---------- Mobile ---------- */

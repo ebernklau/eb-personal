@@ -243,12 +243,12 @@ body {
     font-size: 0.8rem;
   }
 
-  .botanical {
+  /*.botanical {
     width: 125px;
     left: -65px;
     bottom: 0;
     opacity: 0.35;
-  }
+  }*/
 }
 
 /* Very small phones */
